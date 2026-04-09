@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Leggio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!-- nav — see _includes/nav.html -->
+<nav>
+  <a href="index.html" class="nav-brand">Sydney Leggio</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-eyebrow">Additional Projects</div>
+  <h2>Data Science &amp; <em>Quantitative Work</em></h2>
+  <p class="section-desc">Outside of my astrophysics research I enjoy building data-driven tools and exploring quantitative problems — from financial modelling to machine learning pipelines.</p>
+</div>
+
+<section id="projects">
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-tag">Quantitative Finance</div>
+      <div class="card-title">[Project Title]</div>
+      <div class="card-desc">A brief description of what this project does, the data sources used, and the methods — e.g. backtesting a momentum strategy, building a factor model, or analysing order-book microstructure.</div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link secondary">Write-up</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">Machine Learning</div>
+      <div class="card-title">[Project Title]</div>
+      <div class="card-desc">Describe the ML problem here — classification, regression, time-series forecasting, or something else. Mention the framework (PyTorch, sklearn, JAX) and the key result or insight.</div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link secondary">Notebook</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">Data Analysis</div>
+      <div class="card-title">[Project Title]</div>
+      <div class="card-desc">An exploratory analysis or visualisation project — working with a large dataset, building a dashboard, or producing a reproducible data pipeline with interesting findings.</div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link secondary">Demo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- footer — see _includes/footer.html -->
+<footer>
+  <p>© 2025 Sydney Leggio</p>
+  <p>Built for science</p>
+</footer>
+
+<script src="assets/js/starfield.js"></script>
+<script>(function loop(){ drawSF(); requestAnimationFrame(loop); })();</script>
+</body>
+</html>
