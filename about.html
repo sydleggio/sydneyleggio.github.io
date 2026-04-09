@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Leggio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!-- nav — see _includes/nav.html -->
+<nav>
+  <a href="index.html" class="nav-brand">Sydney Leggio</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-eyebrow">About</div>
+  <h2>The <em>Researcher</em></h2>
+</div>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-photo">[Photo]</div>
+    <div class="about-body">
+      <p>I am a PhD candidate in astrophysics at University of Southern California, advised by Prof. [Advisor Name]. My research sits at the intersection of precision astrometry and gravitational wave cosmology, using the positions of distant stars and quasars as a galactic-scale detector for the stochastic gravitational wave background.</p>
+      <p>The nanohertz SGWB — recently indicated by pulsar timing arrays — encodes a wealth of information about the supermassive binary black hole population and early-universe physics. I am working to extract complementary constraints from upcoming astrometric surveys including Gaia, Roman, and Theia.</p>
+      <p>Before my PhD I completed my BSc in Physics at [Undergraduate Institution], where I became captivated by the idea that the universe's entire gravitational wave history might be hiding inside a catalogue of stellar positions.</p>
+      <div class="tag-list">
+        <span class="tag">SGWB</span>
+        <span class="tag">Astrometry</span>
+        <span class="tag">Gaia</span>
+        <span class="tag">SMBHB</span>
+        <span class="tag">PTA</span>
+        <span class="tag">Bayesian Inference</span>
+        <span class="tag">Python / JAX</span>
+        <span class="tag">GW Theory</span>
+        <span class="tag">Roman / Theia</span>
+        <span class="tag">Quantitative Finance</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Data Science</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer — see _includes/footer.html -->
+<footer>
+  <p>© 2025 Sydney Leggio</p>
+  <p>Built for science</p>
+</footer>
+
+<script src="assets/js/starfield.js"></script>
+<script>(function loop(){ drawSF(); requestAnimationFrame(loop); })();</script>
+</body>
+</html>

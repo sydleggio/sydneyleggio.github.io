@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Leggio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!-- nav — see _includes/nav.html -->
+<nav>
+  <a href="index.html" class="nav-brand">Sydney Leggio</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Astrometry &amp; Gravitational Wave Cosmology</div>
+    <h1>Reading the <em>Hum</em><br>of the Universe<br>in Starlight</h1>
+    <p class="hero-sub">PhD Candidate · University of Southern California</p>
+    <p class="hero-desc">
+      I use high-precision astrometry to probe the stochastic gravitational wave background — searching for the subtle, correlated deflections of starlight imprinted by a cosmic sea of gravitational radiation.
+    </p>
+    <div class="hero-cta">
+      <a href="research.html" class="btn btn-primary">View Research</a>
+      <a href="#" class="btn btn-ghost">CV / Publications</a>
+    </div>
+  </div>
+
+  <div class="canvas-wrapper">
+    <canvas id="binaryCanvas" width="420" height="420"></canvas>
+    <p class="canvas-label">Supermassive binary · Click to pause</p>
+    <div class="controls">
+      <div class="control-group">
+        <label class="control-label" for="heroMass">Mass ratio</label>
+        <input type="range" id="heroMass" min="1" max="5" step="0.1" value="2">
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="heroSpeed">Speed</label>
+        <input type="range" id="heroSpeed" min="0.3" max="3" step="0.1" value="1">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-eyebrow">Research areas</div>
+  <h2>Current <em>Projects</em></h2>
+  <p class="section-desc">Developing novel astrometric probes of the stochastic gravitational wave background sourced by the cosmic population of supermassive binary black holes.</p>
+  <div class="research-grid">
+    <div class="research-card">
+      <div class="card-tag">Astrometric GW Detection</div>
+      <div class="card-title">Correlated Proper Motion Anomalies from the SGWB</div>
+      <div class="card-desc">Gravitational waves leave a quadrupolar pattern in the proper motions of distant sources. I am developing statistical estimators to extract this signal from Gaia and future Roman/Theia catalogues.</div>
+      <a href="research.html" class="card-link">Read more →</a>
+    </div>
+    <div class="research-card">
+      <div class="card-tag">SGWB Characterization</div>
+      <div class="card-title">Spectral Shape &amp; Anisotropy of the GW Background</div>
+      <div class="card-desc">Constraining the spectral index and angular power spectrum of the SGWB using angular correlations in astrometric residuals, complementary to pulsar timing array measurements.</div>
+      <a href="research.html" class="card-link">Read more →</a>
+    </div>
+    <div class="research-card">
+      <div class="card-tag">SMBHB Population</div>
+      <div class="card-title">Supermassive Binary Black Hole Demography</div>
+      <div class="card-desc">Linking the SGWB amplitude and spectral shape to the underlying population of inspiralling supermassive binaries across cosmic time — their mass function, merger history, and galactic environment.</div>
+      <a href="research.html" class="card-link">Read more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL BINARY VISUALIZERS -->
+<section id="binaries">
+  <div class="section-eyebrow">Interactive simulations</div>
+  <h2>The Sources of the <em>Background</em></h2>
+  <p class="section-desc">The SGWB is the incoherent superposition of GWs from countless unresolved binaries. Two perspectives on the same physics.</p>
+
+  <div class="binary-duo">
+    <!-- Panel A: Close-up eccentric inspiral -->
+    <div class="binary-panel">
+      <p class="panel-title">Single Binary · Close-up</p>
+      <p class="panel-desc">A supermassive binary black hole inspiralling under gravitational wave emission. Tune eccentricity to see burst-like emission near periapsis.</p>
+      <canvas id="binaryA" width="480" height="360"></canvas>
+      <p class="binary-panel-label">Click to pause · <span class="hl" id="labelA">Quasi-circular</span></p>
+      <div class="controls" style="margin-top:0.6rem">
+        <div class="control-group">
+          <label class="control-label" for="ratioA">q</label>
+          <input type="range" id="ratioA" min="1" max="6" step="0.1" value="3">
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="eccA">ecc</label>
+          <input type="range" id="eccA" min="0" max="0.72" step="0.02" value="0">
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel B: Stochastic background / population sky map -->
+    <div class="binary-panel">
+      <p class="panel-title">Cosmic Population · Sky View</p>
+      <p class="panel-desc">Many binaries at different distances and orientations superpose to form a stochastic background. Green arrows show astrometric deflections of background sources.</p>
+      <canvas id="binaryB" width="480" height="360"></canvas>
+      <p class="binary-panel-label">Click canvas to add a binary · <span class="hl" id="labelB">N = 3 sources</span></p>
+      <div class="controls" style="margin-top:0.6rem">
+        <div class="control-group">
+          <label class="control-label" for="autoAdd">Auto-add</label>
+          <input type="range" id="autoAdd" min="0" max="5" step="1" value="0">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL PROJECTS -->
+<section id="projects">
+  <div class="section-eyebrow">Additional Projects</div>
+  <h2>Data Science &amp; <em>Quantitative Work</em></h2>
+  <p class="section-desc">Outside of my astrophysics research I enjoy building data-driven tools and exploring quantitative problems — from financial modelling to machine learning pipelines.</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-tag">Quantitative Finance</div>
+      <div class="card-title">[Project Title]</div>
+      <div class="card-desc">A brief description of what this project does, the data sources used, and the methods — e.g. backtesting a momentum strategy, building a factor model, or analysing order-book microstructure.</div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link secondary">Write-up</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Machine Learning</div>
+      <div class="card-title">[Project Title]</div>
+      <div class="card-desc">Describe the ML problem here — classification, regression, time-series forecasting, or something else. Mention the framework (PyTorch, sklearn, JAX) and the key result or insight.</div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link secondary">Notebook</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Data Analysis</div>
+      <div class="card-title">[Project Title]</div>
+      <div class="card-desc">An exploratory analysis or visualisation project — working with a large dataset, building a dashboard, or producing a reproducible data pipeline with interesting findings.</div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link secondary">Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-eyebrow">About</div>
+  <h2>The <em>Researcher</em></h2>
+  <div class="about-grid">
+    <div class="about-photo">[Photo]</div>
+    <div class="about-body">
+      <p>I am a PhD candidate in astrophysics at University of Southern California, advised by Prof. [Advisor Name]. My research sits at the intersection of precision astrometry and gravitational wave cosmology, using the positions of distant stars and quasars as a galactic-scale detector for the stochastic gravitational wave background.</p>
+      <p>The nanohertz SGWB — recently indicated by pulsar timing arrays — encodes a wealth of information about the supermassive binary black hole population and early-universe physics. I am working to extract complementary constraints from upcoming astrometric surveys including Gaia, Roman, and Theia.</p>
+      <p>Before my PhD I completed my BSc in Physics at [Undergraduate Institution], where I became captivated by the idea that the universe's entire gravitational wave history might be hiding inside a catalogue of stellar positions.</p>
+      <div class="tag-list">
+        <span class="tag">SGWB</span>
+        <span class="tag">Astrometry</span>
+        <span class="tag">Gaia</span>
+        <span class="tag">SMBHB</span>
+        <span class="tag">PTA</span>
+        <span class="tag">Bayesian Inference</span>
+        <span class="tag">Python / JAX</span>
+        <span class="tag">GW Theory</span>
+        <span class="tag">Roman / Theia</span>
+        <span class="tag">Quantitative Finance</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Data Science</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow">Get in touch</div>
+  <h2>Let's <em>Connect</em></h2>
+  <p style="color:var(--muted);font-size:0.95rem;">Interested in astrometric GW detection, the SGWB, or collaboration on related topics? Reach out.</p>
+  <div class="contact-links">
+    <a href="mailto:" class="contact-link">Email</a>
+    <a href="#" class="contact-link">Twitter / X</a>
+    <a href="https://github.com/sydleggio" class="contact-link">GitHub</a>
+    <a href="#" class="contact-link">ORCID</a>
+    <a href="#" class="contact-link">arXiv</a>
+  </div>
+</section>
+
+<!-- footer — see _includes/footer.html -->
+<footer>
+  <p>© 2025 Sydney Leggio</p>
+  <p>Built for science</p>
+</footer>
+
+<script src="assets/js/starfield.js"></script>
+<script src="assets/js/binary-hero.js"></script>
+<script src="assets/js/binary-panels.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sydney Leggio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!-- nav — see _includes/nav.html -->
+<nav>
+  <a href="index.html" class="nav-brand">Sydney Leggio</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="section-eyebrow">Research areas</div>
+  <h2>Current <em>Projects</em></h2>
+  <p class="section-desc">Developing novel astrometric probes of the stochastic gravitational wave background sourced by the cosmic population of supermassive binary black holes.</p>
+</div>
+
+<section id="research">
+  <div class="research-grid">
+
+    <div class="research-card">
+      <div class="card-tag">Astrometric GW Detection</div>
+      <div class="card-title">Correlated Proper Motion Anomalies from the SGWB</div>
+      <div class="card-desc">Gravitational waves leave a quadrupolar pattern in the proper motions of distant sources. I am developing statistical estimators to extract this signal from Gaia and future Roman/Theia catalogues. This involves computing the Hellings–Downs-like correlation function for astrometric observables and building matched-filter pipelines robust to systematic astrometric errors.</div>
+      <!-- <a href="paper1.pdf" class="card-link">PDF →</a> -->
+    </div>
+
+    <div class="research-card">
+      <div class="card-tag">SGWB Characterization</div>
+      <div class="card-title">Spectral Shape &amp; Anisotropy of the GW Background</div>
+      <div class="card-desc">Constraining the spectral index and angular power spectrum of the SGWB using angular correlations in astrometric residuals, complementary to pulsar timing array measurements. The astrometric signal probes a different frequency band and sky-weighting than PTAs, enabling joint constraints on SGWB anisotropy and spectral shape.</div>
+      <!-- <a href="paper2.pdf" class="card-link">PDF →</a> -->
+    </div>
+
+    <div class="research-card">
+      <div class="card-tag">SMBHB Population</div>
+      <div class="card-title">Supermassive Binary Black Hole Demography</div>
+      <div class="card-desc">Linking the SGWB amplitude and spectral shape to the underlying population of inspiralling supermassive binaries across cosmic time — their mass function, merger history, and galactic environment. Bayesian hierarchical models connect GW observations to galaxy evolution and black hole co-evolution.</div>
+      <!-- <a href="paper3.pdf" class="card-link">PDF →</a> -->
+    </div>
+
+    <div class="research-card">
+      <div class="card-tag">Coming Soon</div>
+      <div class="card-title">[Future Paper]</div>
+      <div class="card-desc">Placeholder for a forthcoming project. Details will be added here upon submission.</div>
+      <!-- <a href="#" class="card-link">PDF →</a> -->
+    </div>
+
+  </div>
+</section>
+
+<!-- footer — see _includes/footer.html -->
+<footer>
+  <p>© 2025 Sydney Leggio</p>
+  <p>Built for science</p>
+</footer>
+
+<script src="assets/js/starfield.js"></script>
+<script>(function loop(){ drawSF(); requestAnimationFrame(loop); })();</script>
+</body>
+</html>
